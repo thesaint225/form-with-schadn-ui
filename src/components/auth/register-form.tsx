@@ -1,113 +1,3 @@
-// "use client";
-
-// import CardWrapper from "./card-wrapper";
-// import {
-//   Form,
-//   FormControl,
-//   FormDescription,
-//   FormItem,
-//   FormLabel,
-//   FormMessage,
-//   FormField,
-// } from "@/components/ui/form";
-// import { RegisterSchema } from "../../../schema";
-// import { useForm } from "react-hook-form";
-// import { zodResolver } from "@hookform/resolvers/zod";
-// import { Input } from "../ui/input";
-// import { Button } from "../ui/button";
-
-// const RegisterForm = () => {
-//   const form = useForm({
-//     resolver: zodResolver(RegisterSchema),
-//     defaultValues: {
-//       email: "",
-//       name: "",
-//       password: "",
-//       confirmedPassword: "",
-//     },
-//   });
-//   const onSubmit = () => {
-//     console.log("submitted");
-//   };
-//   return (
-//     <CardWrapper
-//       label="Create an account"
-//       title="Register"
-//       backButtonHref="/auth/login"
-//       backButtonLabel="Already have an account ? login here"
-//     >
-//       <Form {...form}>
-//         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-//           <div className="space-y-4">
-//             <FormField
-//               control={form.control}
-//               name="email"
-//               render={({ field }) => (
-//                 <FormItem>
-//                   <FormLabel>Email</FormLabel>
-//                   <FormControl>
-//                     <Input
-//                       {...field}
-//                       type="email"
-//                       placeholder="johndoe@gmail.com"
-//                     />
-//                   </FormControl>
-//                   <FormMessage />
-//                 </FormItem>
-//               )}
-//             />
-//             <FormField
-//               control={form.control}
-//               name="name"
-//               render={({ field }) => (
-//                 <FormItem>
-//                   <FormLabel>name</FormLabel>
-//                   <FormControl>
-//                     <Input {...field} placeholder="John Doe" />
-//                   </FormControl>
-//                   <FormMessage />
-//                 </FormItem>
-//               )}
-//             />
-
-//             <FormField
-//               control={form.control}
-//               name="password"
-//               render={({ field }) => (
-//                 <FormItem>
-//                   <FormLabel>password</FormLabel>
-//                   <FormControl>
-//                     <Input {...field} type="password" placeholder="******" />
-//                   </FormControl>
-//                   <FormMessage />
-//                 </FormItem>
-//               )}
-//             />
-//             <FormField
-//               control={form.control}
-//               name="confirmedPassword"
-//               render={({ field }) => (
-//                 <FormItem>
-//                   <FormLabel> confirm password</FormLabel>
-//                   <FormControl>
-//                     <Input {...field} type="password" placeholder="******" />
-//                   </FormControl>
-//                   <FormMessage />
-//                 </FormItem>
-//               )}
-//             />
-//           </div>
-//         </form>
-//         <Button type="submit" className="mt-3 w-full   ">
-//           Register
-//         </Button>
-//       </Form>
-//     </CardWrapper>
-//   );
-// };
-
-// export default RegisterForm;
-
 "use client";
 
 import CardWrapper from "./card-wrapper";
@@ -167,6 +57,7 @@ const RegisterForm = () => {
                     <Input
                       {...field}
                       type="email"
+                      required
                       placeholder="johndoe@gmail.com"
                     />
                   </FormControl>
@@ -181,7 +72,7 @@ const RegisterForm = () => {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input {...field} placeholder="John Doe" />
+                    <Input {...field} placeholder="John Doe" required />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
